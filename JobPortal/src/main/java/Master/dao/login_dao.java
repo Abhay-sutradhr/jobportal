@@ -2,8 +2,7 @@ package Master.dao;
 
 import java.sql.*;
 
-import Master.dto.FoodDto;
-import master.dto.RegisterDto;
+import Master.dto.login;
 import Master.util.*;
 public class login_dao {
 	private Connection cn=null;
@@ -11,10 +10,10 @@ public class login_dao {
 	private PreparedStatement ps=null;
 	private ResultSet rs=null;
 	//private String select_sql="select * from food";
-	private String insert_sql="insert into register values(?,?,?)";
+	private String insert_sql="insert into jobseeker(?,?)";
 	//private String delete_sql="delete from food where fid=?";
 	//private String update_sql="update food set fname=?,fprice=? where fid=?";
-	public void insertData(login_dao fdto)
+	public void insertData(login fdto)
 	{
 		try
 		{
@@ -23,7 +22,6 @@ public class login_dao {
 		    ps=cn.prepareStatement(insert_sql);
 		    ps.setString(1,fdto.getUname());
 		    ps.setString(2,fdto.getPass());
-		    ps.setString(3,fdto.getNm());
 		   
 		    ps.executeUpdate();//insert data
 		}
