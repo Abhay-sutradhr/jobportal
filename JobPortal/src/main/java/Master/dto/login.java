@@ -11,10 +11,10 @@ public void setUname(String uname) {
 	this.uname = uname;
 }
 public String getPass() {
-	return pass;
+	return password;
 }
 public void setPass(String pass) {
-	this.pass = pass;
+	this.password = pass;
 }
 public String getNm() {
 	return nm;
