@@ -28,14 +28,13 @@ public class login extends HttpServlet {
 		String nm=request.getParameter("nm");
 		login rdto=new login();
 		rdto.setUname(uname);
-		rdto.setPass(pass);
-		rdto.setNm(nm);
+		rdto.setPass(password);
 	
 		
 		//FoodDao fdao=new FoodDao();
 		login_dao rdao=new login_dao();
 		rdao.insertData(rdto);
-		response.sendRedirect("Show.jsp");
+		response.sendRedirect("login.jsp");
 	}
 
 }
